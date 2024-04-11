@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>form</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goTo('home')"> HOME </ion-button>
+      <ion-button (click)="goTo('message')"> MESSAGE </ion-button>
+      <ion-button (click)="goTo('menu')"> MENU </ion-button>
+      <ion-button (click)="goTo('tabs')"> TABS </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">form</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <form [formGroup]="form">
+    <ion-list>
+      <ion-item>
+        <ion-checkbox formControlName="terms">I agree to the terms and conditions</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-toggle formControlName="terms2">I agree to the terms and conditions</ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-radio-group formControlName="radio">
+          <ion-radio value="grapes">Grapes</ion-radio><br />
+          <ion-radio value="strawberries">Strawberries</ion-radio><br />
+          <ion-radio value="pineapple">Pineapple</ion-radio><br />
+          <ion-radio value="cherries">Cherries</ion-radio>
+        </ion-radio-group>
+      </ion-item>
+      <ion-item>
+        <ion-select formControlName="select" aria-label="Fruit" placeholder="Select all fruits that apply" [multiple]="true">
+          <ion-select-option value="apples">Apples</ion-select-option>
+          <ion-select-option value="oranges">Oranges</ion-select-option>
+          <ion-select-option value="bananas">Bananas</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-button (click)="logForm()">Summit</ion-button>
+  </form>
+</ion-content>

@@ -1,3 +1,7 @@
 {
-  "typescript.preferences.autoImportFileExcludePatterns": ["@ionic/angular/common", "@ionic/angular/standalone"]
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "@ionic/angular/common",
+    "@ionic/angular/standalone"
+  ],
+  "typescript.tsdk": "/Users/eduardopacreu/Documents/Repositorios/Ionic/Curso2024/ionic-unit-testing/node_modules/typescript/lib"
 }

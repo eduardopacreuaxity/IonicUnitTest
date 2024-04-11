@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>message</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goTo('home')"> HOME </ion-button>
+      <ion-button (click)="goTo('form')"> FORM </ion-button>
+      <ion-button (click)="goTo('menu')"> MENU </ion-button>
+      <ion-button (click)="goTo('tabs')"> TABS </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">message</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-button (click)="openAlert()">ALERTA</ion-button>
+  <ion-button expand="block" (click)="openToast('top')">Present Toast At the Top</ion-button>
+  <ion-button expand="block" (click)="openToast('middle')">Present Toast At the Middle</ion-button>
+  <ion-button expand="block" (click)="openToast('bottom')">Present Toast At the Bottom</ion-button>
+  <ion-button (click)="openPopover($event)">POPOVER</ion-button>
+  <ion-button (click)="openModal()">MODAL</ion-button>
+</ion-content>
