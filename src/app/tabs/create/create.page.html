@@ -13,4 +13,18 @@
       <ion-title size="large">create</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <form [formGroup]="form">
+    <ion-list>
+      <ion-item>
+        <ion-input formControlName="product" label="Producto"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input formControlName="description" label="Descripción"></ion-input>
+      </ion-item>
+    </ion-list>
+  </form>
+
+  <ion-button [disabled]="form.invalid" (click)="createProduct()">CREAR</ion-button>
 </ion-content>

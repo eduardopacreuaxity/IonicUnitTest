@@ -8,10 +8,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PopoverComponent } from './popover/popover.component';
 import { ModalPageModule } from './modal/modal.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, PopoverComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ModalPageModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ModalPageModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
